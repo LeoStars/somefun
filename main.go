@@ -59,6 +59,24 @@ func main() {
 	s5 := dataRune[(a + b) * 2+2:a * 3 + b * 2+3]
 	s6 := dataRune[a * 3 + b * 2+3:a * 3 + b * 3]
 	for i := 0; i < 62130; i ++ {
+		if string(s1[i:i + 4]) == "╔╗╔╗" {
+			if string(s2[i:i + 4]) == "║║║║" {
+
+				if string(s3[i:i + 4]) == "║╚╝║" {
+
+					if string(s4[i:i + 4]) == "╚═╗║" {
+
+						if string(s5[i:i + 4]) == " ╔╝║" {
+							if string(s6[i:i + 4]) == " ╚═╝" {
+								fmt.Print("y")
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/*for i := 0; i < 62130; i ++ {
 		if string(s1[i:i + 4]) == "╔══╗" {
 			if string(s2[i:i + 4]) == "║╔╗║" {
 
@@ -75,7 +93,7 @@ func main() {
 				}
 			}
 		}
-	}
+	}*/
 	dataString = string(dataRune)
 	_ = ioutil.WriteFile("test2.txt", []byte(dataString), 0644)
 }
